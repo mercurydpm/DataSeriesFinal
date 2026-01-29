@@ -13,3 +13,14 @@ double DataSeries::mean() const
     }
     return sum / data_.size();
 }
+
+double DataSeries::max() const
+{
+    double max_value = data_[0];
+    for (double v : data_) {
+        if (v > max_value) {
+            max_value = v;
+        }
+    }
+    return max_value;
+}
